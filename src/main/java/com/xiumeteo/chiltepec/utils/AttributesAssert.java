@@ -17,11 +17,15 @@ import static com.xiumeteo.chiltepec.utils.callbacks.asserters.DefaultAsserters.
 /**
  * Created on 13/10/2014.
  */
-public final class Assert {
+public final class AttributesAssert {
 
 
+    AttributesAssert() {
+    }
 
-    Assert(){}
+    public static final void assertOverAttributes(Asserter asserter, Object... parameters) throws Exception {
+        performAssert(asserter, parameters);
+    }
 
     public static final void assertNotNullAttributes( Object object ) throws Exception{
         performAssert(AsserterFactory.getAsserter(NOT_NULL), object);
@@ -61,7 +65,6 @@ public final class Assert {
 
         for(PropertyDescriptor descriptor: descriptors){
             Method getterMethod = PropertyUtils.getReadMethod( descriptor );
-
 
             if( getterMethod != null ){
                 Object[] values = extractValues(getterMethod, toAssert);

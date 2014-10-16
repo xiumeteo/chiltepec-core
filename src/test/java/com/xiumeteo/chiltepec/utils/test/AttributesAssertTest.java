@@ -9,12 +9,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static com.xiumeteo.chiltepec.utils.Assert.*;
+import static com.xiumeteo.chiltepec.utils.AttributesAssert.*;
 
 /**
  * Created on 13/10/2014.
  */
-public class AssertTest {
+public class AttributesAssertTest {
 
 
     @Test
